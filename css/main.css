@@ -1,0 +1,110 @@
+#cm {
+	width:720px;
+	height:576px;
+	margin:auto;
+	background:red;
+}
+
+.main {
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:78px;
+	padding-bottom:78px;
+}
+
+.game-area {
+	width:430px;
+	height:422px;
+	float:left;
+	background:green;
+	z-index:11;
+}
+
+.aside {
+	padding-left:20px;
+	height:422px;
+	float:left;
+	position:relative;
+}
+
+.logo {
+	width:160px;
+	height:66px;
+	background:blue;
+}
+
+.game-info {
+	margin-top:18px;
+	width:160px;
+	height:136px;
+	background:blue;
+}
+
+.restart-btn {
+	width:160px;
+	height:60px;
+	position:absolute;
+	bottom:0;
+}
+
+
+.card-area {
+	width:25%;
+	float:left;
+	height: 105px;
+	line-height:105px;
+	text-align:center;
+}
+
+.card {
+	width:80px;
+	height:90px;
+	background:grey;
+}
+
+.highlight {
+	-webkit-animation: highlight 1s linear 0s infinite normal;
+	-moz-animation: highlight 1s linear 0s infinite normal;
+	-o-animation: highlight 1s linear 0s infinite normal;
+	animation: highlight 1s linear 0s infinite normal;
+	border:2px solid red;
+}
+
+@-webkit-keyframes highlight {
+	from {
+		border:0;
+	}
+	
+	to {
+		border:2px solid red;
+	}
+}
+
+@-moz-keyframes highlight {
+	from {
+		border:0;
+	}
+	
+	to {
+		border:2px solid red;
+	}
+}
+
+@-o-keyframes highlight {
+	from {
+		border:0;
+	}
+	
+	to {
+		border:2px solid red;
+	}
+}
+
+@keyframes highlight {
+	from {
+		border:0;
+	}
+	to {
+		border:2px solid red;
+	}
+}
