@@ -17,56 +17,73 @@
 			<div class="main clearfix">
 				<div class="game-area">
 					<div class="card-area">
-						<img data-pos="0" class="card highlight">
+						<div data-pos="0" class="cover front">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="1" class="card">
+						<div data-pos="1" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="2" class="card">
+						<div data-pos="2" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="3" class="card">
+						<div data-pos="3" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					
 					<div class="card-area">
-						<img data-pos="4" class="card">
+						<div data-pos="4" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="5" class="card">
+						<div data-pos="5" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="6" class="card">
+						<div data-pos="6" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="7" class="card">
+						<div data-pos="7" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					
 					<div class="card-area">
-						<img data-pos="8" class="card">
+						<div data-pos="8" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="9" class="card">
+						<div data-pos="9" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="10" class="card">
+						<div data-pos="10" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="11" class="card">
+						<div data-pos="11" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					
 					<div class="card-area">
-						<img data-pos="12" class="card">
+						<div data-pos="12" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="13" class="card">
+						<div data-pos="13" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="14" class="card">
+						<div data-pos="14" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
 					<div class="card-area">
-						<img data-pos="15" class="card">
+						<div data-pos="15" class="cover">?</div>
+						<div class="back card"></div>
 					</div>
+					
 				</div>
 				<div class="aside">
 					<div class="logo"></div>
