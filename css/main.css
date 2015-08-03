@@ -32,17 +32,36 @@
 	position:relative;
 }
 
+.popup {
+	width:430px;
+	height:422px;
+	position:absolute;
+	background-color:white;
+	z-index:9999;
+	display:none;
+}
+
+.input-box {
+	width:300px;
+	margin:auto;
+}
+
+.input-group {
+	margin:10px 0;
+}
+
 .logo {
 	width:160px;
 	height:66px;
-	background:blue;
 }
 
 .game-info {
 	margin-top:18px;
 	width:160px;
 	height:136px;
-	background:blue;
+	background:white;
+	color:black;
+	font-size:2em;
 }
 
 .restart-btn {
@@ -64,17 +83,21 @@
 
 
 .cover , .card {
-	width:80px;
-	height:90px;
+	width:84px;
+	height:104px;
 	position:absolute;
-	left:14px;
-	top:8px;
-	line-height:85px;
-	background:RGB(108,126,176);
+	left:12px;
 	border-radius:5px;
-	border:2px solid RGB(222,226,212);
-	text-align:center;
-	font-size:50px;
+	border:2px solid white;
+}
+
+
+#step  {
+	color:grey;
+}
+
+#point{
+	color:red;
 }
 
 
@@ -85,10 +108,6 @@
 	border-radius:5px;
 }
 
-.front {
-	z-index:2;
-	backface-visibility: hidden;
-}
 
 .back {
 	-webkit-transform: rotateY( 180deg );
@@ -105,5 +124,6 @@
     transform: rotateY( 180deg );
 }
 
-
-
+.vs-hidden {
+	visibility:hidden;
+}

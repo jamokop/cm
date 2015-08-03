@@ -6,23 +6,26 @@
 	minCol = 0,
 	maxCol = 0,
 	flippedNum = 0,
-	cardNum = 16,
+	point = 0,
+	cardLeft = 16,
+	step = 0,
+	maxCard = column * maxRow,
 	$cover = $('.cover'),
 	$card = $('.card'),
 	$restartBtn = $('.restart-btn'),
-	maxCard = column * maxRow,
-	colour = ['red','orange','yellow','green','blue','purple','indigo','black'],
-	colorGrid = [];
+	colour = [1,2,3,4,5,6,7,8],
+	colorGrid = [],
+	flippedCard = [];
 	
 	
 	function move()
 	{
 		$cover.removeClass('highlight');
 		$card.removeClass('active');
-		$cover.each(function(){
+		$('.card-area').each(function(){
 			if($(this).data('pos') === cursor) {
-				$(this).addClass('highlight');
-				$(this).siblings().addClass('active');
+				$(this).find('.cover').addClass('highlight');
+				$(this).find('.card').addClass('active');
 			}
 		});
 	}
@@ -32,15 +35,22 @@
 		curRow = 0;
 		minCol = 0;
 		maxCol = 0;
+		point = 0;
 		flippedNum = 0;
-		cardNum = 16;
+		step = 0;
+		cardLeft = column * maxRow;
+		flippedCard = [];
 		colorGrid = shuffleArray(colour.concat(colour));
 		$cover.removeClass('highlight');
 		$card.removeClass('active');
 		$restartBtn.removeClass('highlight');
+		$card.html("");
+		$('.card-area').find('img').removeClass('vs-hidden');
+		$('.card-area').removeClass('flipped');
 		$cover.first().addClass('highlight');
 		$card.first().addClass('active');
-		$('.card-area').removeClass('flipped');
+		$('#step').text('0');
+		$('#point').text('0');
 	}
 	
 	function shuffleArray(array) {
@@ -60,15 +70,48 @@
 	
 	function flip()
 	{
-		var cardArea = $('.highlight').parent();
-		if(!cardArea.hasClass('flipped')) {
+		var cardArea = $('.highlight').parent(),
+			pos = cardArea.data('pos');
+		if(!cardArea.hasClass('flipped') && !cardArea.find('img').hasClass('vs-hidden')) {
+			step++;		
+			$('#step').text(step);
+			if(cardArea.find('.card').html() === '') {
+				cardArea.find('.card').append('<img src="img/colour'+colorGrid[pos]+'.gif">');
+			}
 			cardArea.addClass('flipped');
 			flippedNum++;
+			flippedCard.push({"pos":pos,"colour":colorGrid[pos]});
 		}
 	}
 	
+	function checkFlip()
+	{
+		var cardArea = $('.card-area');
+		if(flippedCard[0].colour === flippedCard[1].colour) {
+			cardLeft = cardLeft - 2;
+			point++;
+			cardArea.each(function(){
+				if($(this).data('pos') === flippedCard[0].pos || $(this).data('pos') === flippedCard[1].pos) {
+					$(this).find('img').addClass('vs-hidden');
+				}
+			});
+			if(cardLeft === 0) {
+				$('.popup').show();
+			}
+		} else {
+			point--;
+			cardArea.each(function(){
+				if($(this).data('pos') === flippedCard[0].pos || $(this).data('pos') === flippedCard[1].pos) {
+					$(this).removeClass('flipped');
+				}
+			});
+		}
+		$('#point').text(point);
+		flippedCard = [];
+	}
+	
 	$(document).keydown(function(e){
-		console.log(e.keyCode);
+		//console.log(e.keyCode);
 		switch(e.keyCode) {
 			case 37:  //  left		
 				var current = cursor - 1;
@@ -122,34 +165,36 @@
 				if(cursor === maxCard) { //restart
 					init();
 				} else {
-					// add step
-					if(flippedNum < 2) {
-						flip();
-					} else {
+					flip();
+					if(flippedNum === 2) {
 						flippedNum = 0;
-						//card1 == card2
-						//+1 point
-						//remove two card	
-						//finished popup winner
-						// not finish , inital flippednum
-						
-						//card1!== card2
-						//-1 point
-						//flipped back
-						//inital flippednum
-					
+						setTimeout(checkFlip,500);
 					}
 				}
 				break;
 		}
-		
-		
-		
-		
 	});
-
-	createGame();
-
-
-
+	
+	$(document).ready(function(){
+		createGame();
+		$('#winner-info').submit(function(e){
+			e.preventDefault();
+			var $formData = $(this).serializeArray();
+			$formData['point'] = point;
+			$.ajax({
+				url : this.href,
+				data : $formData,
+				type : 'post'
+			}).done(function(){
+				
+			}).fail(function(){
+				
+			});
+		});
+		
+		$('#play-again').on('click',function(){
+			$('.popup').hide();
+			init();
+		});
+	});
 })();

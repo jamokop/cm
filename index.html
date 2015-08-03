@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="zh-EN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Colour Memory</title>
+        <meta name="description" content="Colour Memory">
+		<meta http-equiv="PRAGMA" content="NO-CACHE">
+		<meta http-equiv="EXPIRES" content="0">
+		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+		<main id="cm">
+			<div class="main clearfix">
+				<div class="game-area">
+					<div class="card-area" data-pos="0">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="1">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="2">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="3">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					
+					<div class="card-area" data-pos="4">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="5">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="6">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="7">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					
+					<div class="card-area" data-pos="8">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="9">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="10">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="11">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					
+					<div class="card-area" data-pos="12">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area"  data-pos="13">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area"  data-pos="14">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+					<div class="card-area" data-pos="15">
+						<div class="cover">
+							<img src="img/card_bg.gif">
+						</div>
+						<div class="back card"></div>
+					</div>
+				</div>
+				
+				<div class="aside">
+					<img src="img/logo.png" class="logo">
+					<div class="game-info">
+						<label>Step:&nbsp;<span id="step">0</span></label>
+						<label>Point:&nbsp;<span id="point">0</span></label>
+					</div>
+					<button  data-pos="16" class="restart-btn btn btn-info">Restart</button>
+				</div>
+				
+				<div class="popup">
+					<div class="input-box">
+						<form id="winner-info" method="post" href="api/index.php">
+							<h2>Congratulation!</h2>
+							<h3 class="text-right">And winner is ...</h3>
+							<div class="input-group">
+								<label>Name</label>
+								<input type="text" name="name" class="form-control" required>
+							</div>
+							<div class="input-group">
+								<label>Email</label>
+								<input type="email" name="email" class="form-control" required>
+							</div>
+							<input type="submit" class="btn btn-success">
+							<button id="play-again"class="btn btn-success">Play again</button>
+						</form>
+					</div>
+				</div>
+			</div>	
+		</main>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
+
+
+
+
