@@ -180,12 +180,13 @@
 		$('#winner-info').submit(function(e){
 			e.preventDefault();
 			var $formData = $(this).serializeArray();
-			$formData['point'] = point;
+			console.log($formData);
+			$formData.push({"name":"point","value":point});
 			$.ajax({
-				url : this.href,
+				url : this.action,
 				data : $formData,
 				type : 'post'
-			}).done(function(){
+			}).done(function(data){
 				
 			}).fail(function(){
 				
