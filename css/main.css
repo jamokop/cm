@@ -37,12 +37,22 @@
 	height:422px;
 	position:absolute;
 	background-color:white;
-	z-index:9999;
+	z-index:9990;
+	display:none;
 }
 
-.input-box {
+.rank {
+	width:430px;
+	height:422px;
+	position:absolute;
+	background-color:white;
+	z-index:9999;
+	display:none;
+}
+
+.input-box , .rank-box {
 	width:300px;
-	margin:auto;
+	margin:10px auto;
 }
 
 .input-group {
@@ -101,6 +111,10 @@
 	color:red;
 }
 
+#highest-point , #rank {
+	color:red;
+	font-weight:bold;
+}
 
 /* ---------------animation-------------- */
 

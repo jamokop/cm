@@ -187,14 +187,22 @@
 				data : $formData,
 				type : 'post'
 			}).done(function(data){
-				
+				var result = JSON.parse(data);
+				$('.rank').show();
+				$('#highest-point').text(result.max_point);
+				$('#rank').text(result.rank);
 			}).fail(function(){
-				
+				console.log('ajax error');
+			}).always(function(){
+				$('.restart-btn').one('click',function(){
+					$('.popup, .rank').hide();
+					init();
+				});
 			});
 		});
 		
-		$('#play-again').on('click',function(){
-			$('.popup').hide();
+		$('.play-again').on('click',function(){
+			$('.popup, .rank').hide();
 			init();
 		});
 	});
