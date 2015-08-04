@@ -1,4 +1,6 @@
 # cm
+<h2>Enviroment</h2>
+<p>PHP+MYSQL+APACHE</p>
 <h2>How to setup</h2>
 <p>step1:put the sourcecode in your webroot folder(if you don't know what the webroot folder is.google LAMP set up the enviroment first)</p>
 <p>step2:create a new database and import the two table(api/db/stat.sql and max_point.sql)</p>
