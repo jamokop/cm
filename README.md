@@ -9,5 +9,7 @@
 <h2>How to play</h2>
 <p>navigate: arrow keys</p>
 <p>select:enter key</p>
+<h2>Online demo</h2>
+<p><a href="https://dry-citadel-7935.herokuapp.com/" target="_blank">cm</a></p>
 <h2>License</h2>
 <p>cm is a open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a></p>
